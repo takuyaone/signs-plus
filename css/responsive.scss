@@ -1,0 +1,604 @@
+@media screen and (min-width: 768px) {
+  body{
+
+    background-color: #eee;
+  }
+  .container{
+    max-width: 1600px;
+    min-width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: -10;
+  }
+  section{
+    width: 1160px;
+    margin: 0 auto;
+  }
+  .open-btn1{
+    display: none;
+  }
+  header{
+    width: 100%;
+    animation: blinkAnime 2s ;
+    @keyframes blinkAnime{
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+    ul{
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      width: 100%;
+      max-width: 1570px;
+      margin: 0 auto;
+      padding: 30px 0;
+      color: #000;
+      letter-spacing: 0;
+      font-size: 17px;
+      z-index: 9999;
+      li{
+        margin-right: 30px;
+        font-family: 'Oswald', sans-serif;
+        line-height:1;
+        .blog{
+          text-align: center;;
+          width: 40px;
+          padding: 0 8px;
+          margin-left: 20px;
+          border: 1px solid #000;
+          transition: all .5s;
+          &:hover{
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+      li:last-child{
+        margin-right: 0;
+      }
+      li .content{
+        position: relative;
+      }
+      li .content:hover{
+        color: #000;
+      }
+      li .content::after{
+        content: '';
+        /*絶対配置で線の位置を決める*/
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        /*線の形状*/
+        width: 80%;
+        height: 1px;
+        background:#000;
+        /*アニメーションの指定*/
+        transition: all .3s;
+        transform: scale(0, 1);/*X方向0、Y方向1*/
+        transform-origin: center top;/*上部中央基点*/
+      }
+      li .content:hover::after{
+        transform: scale(1.4, 1.4);/*X方向にスケール拡大*/
+      }
+
+    }
+    .start{
+      p{
+        width: 400px;
+      }
+    }
+    .header-logo{
+      width: 400px;
+    }
+    .scrolldown{
+      display: block;
+    /*描画位置※位置は適宜調整してください*/
+      position: absolute;
+      bottom:2%;
+      right:48%;
+      cursor: pointer;
+      width: 50px;
+      height: 30px;
+    }
+    .scrolldown span{
+    /*描画位置*/
+    position: absolute;
+    left: 10px;
+    bottom:10px;
+      /*テキストの形状*/
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    }
+
+    /* 矢印の描写 */
+    .scrolldown:before {
+      content: "";
+      /*描画位置*/
+      position: absolute;
+      bottom: 0;
+      left: 3px;
+      /*矢印の形状*/
+      width: 1px;
+      height: 10px;
+      background: #eee;
+      transform: skewX(-31deg);
+    }
+    .scrolldown:after{
+      content:"";
+        /*描画位置*/
+      position: absolute;
+      bottom:0;
+      left:0;
+        /*矢印の形状*/
+      width:1px;
+      height: 30px;
+      background:#eee;
+    }
+  }
+  /* 背景斜め線 */
+  .content{
+    .bg{
+      display: block;
+      position: relative;
+    }
+    .bg span{
+      width: 970px;
+      height: 2800px;
+      display: block;
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      margin-left: -700px;
+      -webkit-transform: skewX(-47deg);
+      transform: skewX(-47deg);
+      background: #2f2f2f;
+    }
+    .bg span:nth-child(even){
+      top: 2800px;
+      margin-left: -270px;
+      -webkit-transform: skewX(47deg);
+      transform: skewX(47deg);
+    }
+    /* concept */
+    .concept{
+      width: 1160px;
+      margin: 0 auto;
+      z-index:2;
+      .wrap{
+        padding-top: 150px;
+        h2{
+          font-size: 42px;
+          padding-bottom: 40px;
+          font-weight: bold;
+        }
+        h2::after{
+          width: 84px;
+          height: 1px;
+          bottom: -20px;
+          left: 50%;
+          margin: 0 0 0 -44px;
+        }
+        .num-img{
+          top: 100px;
+          right: 100px;
+          width: 350px;
+          height: 300px;
+        }
+        .concept-img{
+          height: 620px;
+        }
+        .concept-text{
+          padding:0;
+          .text-card{
+            position: absolute;
+            top: 420px;
+            right: 0;
+            width: 400px;
+            padding: 50px 10px 50px 40px;
+            h3{
+              font-size: 19px;
+            }
+            p{
+              font-size: 14px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+    /* cafe */
+    .cafe{
+      padding-top: 150px;
+      .wrap{
+        h2{
+          font-size: 42px;
+          color: #fff;
+          padding: 80px 0 40px 0;
+        }
+        h2::after{
+          width: 84px;
+          height: 1px;
+          bottom: -20px;
+          left: 50%;
+          margin: 0 0 0 -44px;
+          background-color: #fff;
+        }
+        .num-img{
+          top: 100px;
+          left: 100px;
+          width: 350px;
+          height: 300px;
+          z-index: 1;
+        }
+        .cafe-content{
+          .slider{
+            z-index: 2;
+            height: 620px;
+            .slider-item{
+              height: 620px;
+            }
+          }
+          .cafe-menus{
+            padding: 50px;
+            .menus-wrap{
+              .menu-content{
+                display: flex;
+                .tab{
+                  width: 35%;
+                  display: block;
+                  padding: 0 30px;
+                  li a{
+                    width: 300px;
+                    padding: 30px 20px;
+                    font-size: 20px;
+                    text-align: left;
+                  }
+                }
+                .area{
+                  border-top: 1px solid #000;
+                  padding: 30px;
+                  .centence{
+                    font-size: 14px;
+                  }
+                  ul{
+                    li{
+                      .menu-img{
+                        width: 30%;
+                        padding-right: 30px;
+                      }
+                      .detail{
+                        h4{
+                          font-size: 16px;
+                        }
+                        p{
+                          font-size: 14px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /* salon */
+    .salon{
+      padding-top: 150px;
+      .wrap{
+        h2{
+          font-size: 42px;
+          color: #000;
+          padding: 80px 0 40px 0;
+        }
+        h2::after{
+          width: 84px;
+          height: 1px;
+          bottom: -20px;
+          left: 50%;
+          margin: 0 0 0 -44px;
+          background-color: #000;
+        }
+        .num-img{
+          top: 100px;
+          right: 100px;
+          width: 350px;
+          height: 300px;
+          z-index: 1;
+        }
+        .salon-content{
+          .slider{
+            z-index: 2;
+            height: 620px;
+            .slider-item{
+              height: 620px;
+            }
+          }
+          .salon-menus{
+            padding: 50px;
+            .menu{
+              display: flex;
+              position: relative;
+              margin: 0 20px 10px;
+              h4{
+                width: 50%;
+                position: absolute;
+                top: 50%;
+                font-size: 32px;
+              }
+              .menu-list{
+                width: 50%;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                ul{
+                  padding: 30px;
+                  li{
+                    font-size: 16px;
+                  }
+                }
+                p{
+                  font-size: 12px;
+                }
+              }
+            }
+            .remarks{
+              position: relative;
+              width: 50%;
+              left: 50%;
+              padding: 30px;
+              p{
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    /* news */
+    .news{
+      margin-top: 80px;
+      width: 100%;
+      z-index:2;
+      .wrap{
+        padding: 150px 60px 100px;
+        h2{
+          font-size: 34px;
+          position: absolute;
+          top: 70px;
+          left: 80px;
+          z-index: 1;
+        }
+        .num-img{
+          top: 10px;
+          left: 145px;
+          width: 110px;
+          height: 110px;
+        }
+        .news-contents{
+          .news-card{
+            position: relative;
+            background-size: 120px 120px;
+            background-position: left;
+            width: 50%;
+            height: 140px;
+            .news-content{
+              position: absolute;
+              left: 160px;
+              top:50px;
+              .date{
+                padding:0;
+                font-size: 16px;
+              }
+              .ttl{
+                font-size: 14px;
+                margin-top:14px;
+              }
+            }
+          }
+          .card3{
+            margin-top: 20px;
+          }
+          .card4{
+            margin-top: 20px;
+          }
+        }
+        .btn{
+          text-align: center;
+          .more{
+            width: 300px;
+            transition: all .5s;
+            border: 1px solid #fff;
+            font-size: 16px;
+          }
+          .more:before {
+            content: "";
+            /*描画位置*/
+            position: absolute;
+            top: 22px;
+            right: 90px;
+            /*矢印の形状*/
+            width: 2px;
+            height: 5px;
+            background: #000;
+            transform: skewX(62deg);
+            transition: all .5s;
+          }
+          .more:after {
+            content: "";
+            /*描画位置*/
+            position: absolute;
+            bottom: 15px;
+            right: 95px;
+            /*矢印の形状*/
+            width: 1px;
+            height: 20px;
+            background: #000;
+            transform: rotate(90deg);
+            transition: all .5s;
+          }
+          .more:hover{
+            background: none;
+            color: #fff;
+          }
+          .more:hover::before{
+            right: 70px;
+            background-color: #fff;
+          }
+          .more:hover::after{
+            right: 75px;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    /* info */
+    .info{
+      .wrap{
+        .info-ttl{
+          display: none;
+        }
+        #map{
+          max-width: 1600px;
+          width: 100%;
+          height: 65vh;
+          position: relative;
+        }
+        .info-content{
+          h2{
+            display: block;
+          }
+          .num-img{
+            display: block;
+          }
+          position: absolute;
+          top: 80px;
+          right:60px;
+          background-color: #fff;
+          padding: 40px;
+          h2{
+            font-size: 34px;
+            padding: 0;
+            margin-bottom: 30px;
+          }
+          .num-img{
+            z-index:1;
+            width: 110px;
+            height: 110px;
+            right: 20px;
+            top: -40px;
+          }
+          h3{
+            font-size: 17px;
+          }
+          .access{
+            font-size: 14px;
+          }
+          @mixin pc-op-holi{
+            ul{
+              li:first-child{
+                span{
+                  margin:0;
+                }
+              }
+              li:last-child{
+                span{
+                  margin-left: 57px;
+                }
+              }
+            }
+          }
+          .open{
+            display: flex;
+            font-size: 14px;
+            margin-bottom: 10px;
+            h4{
+              margin-right: 40px;
+            }
+            @include pc-op-holi;
+          }
+          .holiday{
+            font-size: 14px;
+            @include pc-op-holi;
+          }
+          .btn{
+            font-size: 16px;
+            text-align: center;
+            margin-top: 30px;
+            .more{
+              width: 100%;
+              transition: all .5s;
+              border: 1px solid #000;
+              font-size: 16px;
+            }
+            .more:before {
+              content: "";
+              /*描画位置*/
+              position: absolute;
+              top: 22px;
+              right: 90px;
+              /*矢印の形状*/
+              width: 2px;
+              height: 5px;
+              background: #fff;
+              transform: skewX(62deg);
+              transition: all .5s;
+            }
+            .more:after {
+              content: "";
+              /*描画位置*/
+              position: absolute;
+              bottom: 15px;
+              right: 95px;
+              /*矢印の形状*/
+              width: 1px;
+              height: 20px;
+              background: #fff;
+              transform: rotate(90deg);
+              transition: all .5s;
+            }
+            .more:hover{
+              background: none;
+              color: #000;
+            }
+            .more:hover::before{
+              right: 70px;
+              background-color: #000;
+            }
+            .more:hover::after{
+              right: 75px;
+              background-color: #000;
+            }
+          }
+        }
+      }
+    }
+    /* footer */
+    footer{
+      .wrap{
+        padding: 50px 0 20px;
+        #logo-area{
+          .footer-logo{
+            width: 170px;
+            height: 100px;
+          }
+        }
+      }
+    }
+    
+  }
+  #page-top{
+    bottom: 20px;
+    right: 20px;
+    img{
+      width: 100px;
+      height: 70px;
+    }
+  }
+}
