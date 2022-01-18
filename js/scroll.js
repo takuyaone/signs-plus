@@ -21,39 +21,15 @@ $(window).on('load resize', function () {
 
 
 /* 下スクロールによるロゴボタン出現 */
-function PageTopAnime() {
-  var scroll = $(window).scrollTop();
-  if (scroll >= 100){//上から200pxスクロールしたら
-    $('#page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
-    $('#page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
-  }else{
-    if($('#page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
-      $('#page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-      $('#page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
-    }
-  }
-}
 $(window).scroll(function () {
-  PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-});
 
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-  PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-});
-
-var scrollStart = $('#page-top').offset().top; //ページ上部からの距離を取得
-var scrollEnd = $('#footer').offset().top; //ページ上部からの距離を取得
-var windowHeight = $(window).height(); //ウインドウの高さを取得
-var distance = 0;
-
-$(document).scroll(function () {
-  distance = $(this).scrollTop(); //スクロールした距離を取得
-
-  if (scrollEnd <= distance + windowHeight/1.4) { //スクロール距離がendの位置を超えたら
-    $('#page-top').fadeOut(); //フェードアウト
+  var scroll = $(window).scrollTop();
+  if (scroll >= 100) {
+    $('#page-top').addClass('on');
   } else {
-    $('#page-top').fadeIn(); //endより上部に戻ったらフェードイン
+    if ($('#page-top').hasClass('on')) {
+      $('#page-top').removeClass('on');
+    }
   }
 });
 

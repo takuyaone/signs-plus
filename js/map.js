@@ -32,13 +32,3 @@ function initMap() {
   map.mapTypes.set('GrayScaleMap', mapType);
   map.setMapTypeId('GrayScaleMap');
 }
-
-
-// $(function () {
-//   $('.info').click(function () {
-//     $('.info #map').css("pointer-events", "auto");
-//   });
-//   $('.info').mouseout(function () {
-//     $('.info #map').css("pointer-events", "none");
-//   });
-// });

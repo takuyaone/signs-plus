@@ -835,27 +835,8 @@ header {
       height: 30px;
     }
   }
-  #page-top.UpMove{
-    animation: UpMove 0.5s forwards;
-  }
-  @keyframes UpMove{
-    from{
-      opacity: 0;
-    }
-    to{
-      opacity: 1;
-    }
-  }
-  #page-top.DownMove{
-    animation: DownMove 0.5s forwards;
-  }
-  @keyframes DownMove{
-    from{
-      opacity: 1;
-    }
-    to{
-      opacity: 0;
-    }
+  .on{
+    opacity: 1 !important;
   }
 
 
